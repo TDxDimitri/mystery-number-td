@@ -8,26 +8,26 @@
     <script src="js\script.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-<body>
-    <div class="container d-flex justify-content-center vh-100 ">
-        <div class=" d-flex align-items-center">
-                <div class="input-group mt-5">
-                    <input type="number" placeholder="choix" name="choix" min="1" max="10" id="choix" class="form-control border border-dark">
+<body class="bg-warning">
+    <div class="container d-flex justify-content-center vh-100 bg-warning col">
+        <div class= "d-flex align-items-center">
+                <div class="input-group mt-5 col">
+                    <input type="number" placeholder="choix" name="choix" min="1" max="10" id="choix" class=" form-control border border-dark">
                 </div>
-                <div class="mt-5">
-                    <button type="submit" name="devine" class="btn btn-outline-success ms-5 test ">Testez</button>
+                <div class="mt-5 ">
+                    <button type="submit" name="devine" id="devine" onclick="blur()" class=" btn btn-success ms-5 test ">Testez</button>
                 </div>
-            <div class=" ms-5 card text-white bg-dark mb-5" style="max-width: 18rem;">
-                <div class="card-header"> 
+            <div id="retour" class=" ms-5 card text-white bg-dark mb-5" style="max-width: 25rem;">
+                <div id="he1" class="card-header"> 
                     <h4>Bienvenue dans l'arène ⚔ 🎮!</h4>
                 </div>
-                <div class="card-header"> 
+                <div id="he2" class="card-header"> 
                     <h6>le but est de deviner en 3 essais le chiffre choisi par l'ordinateur 💻</h6>
                 </div>
                 <div class="card-body">
-                    <div class=" d-flex flex-column justify-content-center card-text res1 "></div>
-                    <div class=" d-flex flex-column justify-content-center card-text res2 "></div>
-                    <div class=" d-flex flex-column justify-content-center card-text res3 "></div>
+                    <div id="t1" class=" d-flex flex-column justify-content-center align-items-center res1 "></div>
+                    <div id ="t2" class=" d-flex flex-column justify-content-center align-items-center res2 "></div>
+                    <div class=" d-flex flex-column  align-items-center res3 "></div>
                 </div>
             </div>
         </div>
