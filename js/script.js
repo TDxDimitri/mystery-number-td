@@ -3,7 +3,7 @@ var random = Math.floor(Math.random() * (10 - 1)) + 1;
 var test = document.querySelector(".test");
 test.addEventListener("click",comparer);
 console.log(random)
-let tries = 0;
+let tries = null;
 function comparer(){
     var choix = document.querySelector("#choix").value;
     var res1 = document.querySelector(".res1");
@@ -13,25 +13,25 @@ function comparer(){
     console.log(tries)
 
     if(choix < random && tries==1){
-        res1.innerHTML = "<p>c'est plus...</p>";
+        res1.innerHTML = "<p>c'est plus...</p><hr><br>";
 
     }
-    if(choix > random && tries == 1){
-        res1.innerHTML = "<p>c'est moins...</p>";
+    else if(choix > random && tries == 1){
+        res1.innerHTML = "<p>c'est moins...</p><hr><br>";
     }
-    if(choix < random && tries==2){
-        res2.innerHTML = "<p>c'est plus...</p>";
+    else if(choix < random && tries==2){
+        res2.innerHTML = "<p>c'est plus...</p><hr><br>";
 
     }
-    if(choix > random && tries == 2){
-        res2.innerHTML = "<p>c'est moins...</p>";
+    else if(choix > random && tries == 2){
+        res2.innerHTML = "<p>c'est moins...</p><hr><br>";
     }
-    if(choix == random){
-        res3.innerHTML = "<p>c'est gagné</p>";
+    else if(choix == random){
+        res3.innerHTML = "<p>c'est gagné</p><br><a href='' type='button' class='btn btn-primary'>Rejouer</a>"
 
     }
-    if(choix != random && tries == 3){
-        res3.innerHTML = "<p>c'est perdu</p>";
+    else if(choix != random && tries == 3){
+        res3.innerHTML = "<p>c'est perdu</p><br><a href='' type='button' class='btn btn-primary'>Rejouer</a>"
     }
     
 }
